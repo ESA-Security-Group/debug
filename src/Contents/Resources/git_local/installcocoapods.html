@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78629613-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-78629613-2');
+    </script>
+    <!-- Analytics END -->
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install with pods &mdash; GroundSdk iOS 1.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/clipboard.min.js"></script>
+        <script type="text/javascript" src="_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Notes" href="appsubmission.html" />
+    <link rel="prev" title="Install and build GroundSdk" href="buildgroundsdk.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> GroundSdk iOS
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buildgroundsdk.html">Install and build GroundSdk</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install with pods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pods-groundsdk-arsdkengine-sdkcore">Pods : GroundSdk, ArsdkEngine, SdkCore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-pods-in-the-demo-app-or-in-your-project">Use Pods in the demo app or in your project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-groundsdk-demo-app-and-pods">Install the GroundSdk Demo App and Pods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-parrot-sdk-pods-in-a-fresh-xcode-project">Adding Parrot Sdk Pods in a fresh Xcode project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appsubmission.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://developer.parrot.com/docs/groundsdk-ios-samples/">Samples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GroundSdk iOS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Install with pods</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="install-with-pods">
+<span id="pod-install"></span><h1>Install with pods<a class="headerlink" href="#install-with-pods" title="Permalink to this headline">¶</a></h1>
+<p><em>CocoaPods is a dependency manager for Swift and Objective-C Cocoa
+projects. It has over 30 thousand libraries and is used in over 1.9
+million apps. CocoaPods can help you scale your projects
+elegantly.</em> <a class="reference external" href="https://cocoapods.org">https://cocoapods.org</a></p>
+<div class="section" id="pods-groundsdk-arsdkengine-sdkcore">
+<h2>Pods : GroundSdk, ArsdkEngine, SdkCore<a class="headerlink" href="#pods-groundsdk-arsdkengine-sdkcore" title="Permalink to this headline">¶</a></h2>
+<p>GroundSdk for iOS mobile applications provides three Pods that can
+quickly and easily set up any application.</p>
+<p><strong>GroundSdk</strong>: Parrot Drone SDK - Hi-Level API</p>
+<p><strong>ArsdkEngine</strong>: Parrot Drone SDK, arsdk based engine</p>
+<p><strong>SdkCore</strong>: Parrot Drone SDK, low level implementation (pre-compiled
+framework).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The use of Pods allows you to include only the source of the APIs
+of GroundSdk iOS and to use a pre-compiled version of all other
+libraries (Pod SdkCore). These libraries are also provided in Open
+Source and it is also possible to install a full version of groundSdk
+with all sources (see the corresponding installation guide).</p>
+</div>
+</div>
+<div class="section" id="use-pods-in-the-demo-app-or-in-your-project">
+<h2>Use Pods in the demo app or in your project<a class="headerlink" href="#use-pods-in-the-demo-app-or-in-your-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="getting-started">
+<h3>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<p>You first need to install CocoaPods.</p>
+<p>CocoaPods is built with Ruby and it will be installable with the default
+Ruby available on macOS. You can use a Ruby Version manager, however we
+recommend that you use the standard Ruby available on macOS unless you
+know what you’re doing.</p>
+<p>Using the default Ruby install will require you to use sudo when
+installing gems. (This is only an issue for the duration of the gem
+installation, though.)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo gem install cocoapods
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-the-groundsdk-demo-app-and-pods">
+<h3>Install the GroundSdk Demo App and Pods<a class="headerlink" href="#install-the-groundsdk-demo-app-and-pods" title="Permalink to this headline">¶</a></h3>
+<p>Clone the demo:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/Parrot-Developers/pod_groundsdk_demo.git
+</pre></div>
+</div>
+<p>Or download the zip file:</p>
+<p><a class="reference external" href="https://github.com/Parrot-Developers/pod_groundsdk_demo/archive/master.zip">https://github.com/Parrot-Developers/pod_groundsdk_demo/archive/master.zip</a></p>
+<p>Open Terminal and navigate to the directory that contains
+your pod_groundsdk_demo by using the cd command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> ~/Path/To/Folder/Containing/pod_groundsdk_demo
+</pre></div>
+</div>
+<p>Enter the command (be sure to close Xcode before)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pod install
+</pre></div>
+</div>
+<p>Now, you can open the <strong>groundSdkDemo</strong> with the Xcode workspace:
+<em>GroundSdkDemo.xcworkspace</em></p>
+<p><a class="reference internal" href="_images/image1.png"><img alt="image0" src="_images/image1.png" style="width: 2.06647in; height: 4.43478in;" /></a></p>
+</div>
+<div class="section" id="adding-parrot-sdk-pods-in-a-fresh-xcode-project">
+<h3>Adding Parrot Sdk Pods in a fresh Xcode project<a class="headerlink" href="#adding-parrot-sdk-pods-in-a-fresh-xcode-project" title="Permalink to this headline">¶</a></h3>
+<p>You first need to close Xcode.</p>
+<p>Open Terminal and navigate to the directory that contains
+your appProject by using the cd command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> ~/Path/To/Folder/Containing/appProject
+</pre></div>
+</div>
+<p>Next, enter the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pod init
+</pre></div>
+</div>
+<p>This creates
+a <a class="reference external" href="https://guides.cocoapods.org/using/the-podfile.html">Podfile</a> for
+your project.</p>
+<p>Open the Podfile using Xcode for
+editing:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> open -a Xcode Podfile
+</pre></div>
+</div>
+<p>Replace all content with:</p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">&#39;10.0&#39;</span>
+
+<span class="n">target</span> <span class="s1">&#39; appProject &#39;</span> <span class="k">do</span>
+    <span class="n">use_frameworks!</span>
+    <span class="n">pod</span> <span class="s1">&#39;GroundSdk&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.1.2&#39;</span>
+    <span class="n">pod</span> <span class="s1">&#39;ArsdkEngine&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.1.2&#39;</span>
+    <span class="n">pod</span> <span class="s1">&#39;SdkCore&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.1.2&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Save and close the Podfile.</p>
+<p>You now need to tell CocoaPods to install the dependencies for your
+project. Enter the following command in Terminal, after ensuring you’re
+still in the directory containing the appProject project and Podfile:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pod install
+</pre></div>
+</div>
+<p><strong>Open the project folder using Finder, and you’ll see CocoaPods created
+a new appProject.xcworkspace file and a Pods folder !</strong></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="appsubmission.html" class="btn btn-neutral float-right" title="Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="buildgroundsdk.html" class="btn btn-neutral float-left" title="Install and build GroundSdk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Parrot
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
