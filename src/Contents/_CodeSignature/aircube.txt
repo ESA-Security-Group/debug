@@ -1,0 +1,238 @@
+Changelog
+=========
+This is afirmware changelog for airCube AC and ISP devices.
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+2.7.0-beta01 - 2020-01-23
+-------------------------
+### Added
+ - Allow firmware downgrade from beta to the last public stable.
+ - Reporting of user space stability issues.   **Important note**: reporting is OFF by default. Customers are highly encouraged
+   to opt in with REPORT STABILITY ISSUES toggle in System settings. Please refer to
+   the [info page](https://help.ubnt.com/hc/en-us/articles/360039716794/) for the
+   details and example of data being sent.
+
+### Changed
+ - Added missing device information in the UDP discovery response.
+ - Improved UNMS support.
+
+### Fixed
+ - 5 GHz interface going down on AC devices.
+ - LLDP discovery on ISP devices.
+ - VLAN functionality on ISP devices in bridge mode:
+   * without configured DATA VLAN traffic in VLAN could pass between LAN ports and
+     between WAN and LAN ports
+   * with DATA VLAN enabled traffic could pass between LAN ports in other VLANs.
+ - VLAN functionality on ISP devices in router mode:
+   * If some VLAN from WAN port was bridged to LAN port via Port Based VLANs
+     menu, host behind this LAN port was losing connection to airCube LAN IP.
+
+2.6.2 - 2019-12-17
+------------------
+### Changed
+ - Improved UNMS support.
+
+### Fixed
+ - Excessive ping traffic to ping.ubnt.com.
+
+2.6.1 - 2019-11-12
+------------------
+### Changed
+ - Updated SSL certificates to meet new Apple requirements.
+ - Improved UNMS support.
+
+### Fixed
+ - Multiple PPTP connections in router mode.
+ - Regulatory issues.
+
+2.6.0 - 2019-08-27
+------------------
+### Added
+ - IPv6 Ubiquiti neighbor discovery.
+
+### Changed
+ - Improved UNMS support.
+ - Improved wireless stability.
+   Fixed for most customers based on support files, new feedback
+   is crucial to check if any corner cases remain.
+
+### Security
+ - Fix for NFLX-2019-001 CVE-2019-11477.
+ - Fix for NFLX-2019-001 CVE-2019-11478.
+ - Fix for NFLX-2019-001 CVE-2019-11479.
+
+2.5.0 - 2019-05-20
+------------------
+### Added
+ - Enabled ICMP IPv6 neighbour discovery.
+ - LLDP device discovery   **Important compatibility note**
+   VLAN ID range available for user configuration changed to 5-4090,
+   4091-4094 is now reserved.
+
+### Changed
+ - Significantly improved throughput in router mode for AC devices.
+ - Improved (but not fully fixed) Wi-Fi client connection stability.
+   More fixes to come in the following releases.
+
+2.4.3 - 2019-03-13
+------------------
+### Changed
+ - U-APSD disabled for 5 GHz issues with specific client devices.
+ - Added rate monitor for internal watchdog.
+
+2.4.2 - 2019-02-21
+------------------
+### Added
+ - New: Enhanced debug statistics and support file contents.
+
+### Changed
+ - New: Updated 5 GHz offload firmware.
+
+### Fixed
+ - Wi-Fi client disconnection and reconnection issues.
+ - WEB UI: static IP validation in bridge mode.
+
+2.4.0 - 2018-09-04
+------------------
+### Added
+ - Static routes.
+ - Static DHCP leases.
+ - wireless drivers update.
+
+### Fixed
+ - Powersave issue for some wireless clients.
+ - Double hostname issue found on DHCP server in some cases.
+ - WEB UI: IP validator.
+ - WEB UI: UNMS status indicator.
+ - WEB UI: Various small UI improvements and bug fixes.
+
+2.3.1 - 2018-06-26
+------------------
+### Added
+ - NAT disable option.
+
+### Changed
+ - Improved firmware download on upgrade.
+ - WEB UI: show txpower actual values.
+ - WEB UI: show DHCP leases.
+ - WEB UI: show UPNPd leases.
+ - WEB UI: show frequency and channel on dashboard.
+ - WEB UI: Various small UI improvements and bug fixes.
+
+### Fixed
+ - Allow underscore in hostname.
+ - Show repeater hostname in DHCP leases list.
+ - Show hostname in Edge Router DHCP leases list.
+ - WEB UI: fix UNMS indicator link with custom port.
+
+2.3.0 - 2018-06-14
+------------------
+### Added
+ - Port forward configuration.
+ - UPNP Service.
+ - Wireless mode 20-40 MHZ AUTO in 2.4Ghz mode.
+
+### Changed
+ - WEB UI: Show UNMS status.
+ - WEB UI: Show firmware version in blue header.
+ - WEB UI: Show clients IP and hostname (router mode only).
+ - WEB UI: Various small UI improvements and bug fixes.
+ - Updated EULA.
+
+### Fixed
+ - Config save problem using Firefox and Internet Explorer.
+
+2.2.0 - 2018-05-07
+------------------
+### Added
+- Port-based VLANs support.
+- Wifi radio enable/disable option.
+- VLAN tagged data traffic.
+- Option to check beta firmware releases.
+
+### Changed
+ - WEB UI: Show LAN, WAN and MGT IP on dashboard.
+ - WEB UI: Highlight the setting tab on configuration changes and errors.
+ - WEB UI: Various small UI improvements and bug fixes.
+
+### Fixed
+ - Can't save settings using PPPoE without service name.
+ - Added Jerusalem and Tel Aviv to timezones list.
+ - WAN PPPoE dashboard statistics.
+ - Improved configuration values parsing.
+
+2.1.0 - 2018-04-04
+------------------
+### Added
+ - Management VLAN support.
+ - Configurable channel width.
+ - Enable reset button setting on System page.
+ - Device Maintenance settings on System page.
+
+### Changed
+ - WEB UI: Layout and other visual improvements.
+
+### Fixed
+ - Password issue with non-default username.
+ - Backup/restore issue.
+ - High memory usage.
+
+2.0.1 - 2018-02-15
+------------------
+### Added
+ - In DHCP client mode custom DNS field added.
+ - Display frequency and channel in APs frequency selection.
+
+### Fixed
+ - WebUI crash when checking new firmware online.
+ - Throughput chart in Bridge mode.
+
+2.0.0 - 2018-02-12
+------------------
+### Added
+ - WEB UI for Wireless, Network, and System settings.
+ - Password reset functionality.
+ - Mesh Mode support.
+ - PPPoe Client support.
+ - Router mode is ON by default.
+ - Block Management Access is ON by default.
+ - UNMS agent upgrade to v0.3.3.
+ - WEB UI: First Login page.
+ - WEB UI: Configurable Username.
+ - WEB UI: Configurable DHCP range.
+ - WEB UI: Show WAN IP on Dashboard.
+ - WEB UI: Various small UI improvements and bug fixes.
+
+### Changed
+ - Save configuration made on multiple tabs.
+ - Use 2.4 GHz Radio Settings for second radio.
+ - Show Tooltips for Wireless settings.
+
+### Fixed
+- Security fixes and improvements.
+
+1.1.2 - 2017-12-22
+------------------
+### Fixed
+ - Device discovery on WAN port.
+ - Configuration issue for router mode after upgrade from early versions v1.0.x.
+
+1.1.1 - 2017-10-17
+------------------
+### Security
+ - Security patch for the WPA2 vulnerability called KRACK.
+
+1.1.0 - 2017-10-13
+------------------
+### Added
+ - Router mode support.
+ - UNMS agent upgrade.
+
+### Fixed
+ - Kick wireless clients on LAN IP address change.
+ - Device reboot on high network load.
+ - Default hostname indicates full device name.
+ - Small fixes in network statistics calculation.
