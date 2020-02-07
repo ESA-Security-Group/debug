@@ -1,1 +1,0 @@
-<iframe width='345' height='899' src='https://www.eea.europa.eu/data-and-maps/daviz/maximum-ozone-hole-area-5/embed-chart?chart=chart_1&chartWidth=1330&chartHeight=660&padding=fixed&customStyle=.googlechart_view{margin-left:0px%3B}'></iframe>
